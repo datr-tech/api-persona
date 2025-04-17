@@ -1,0 +1,23 @@
+import { Request, Response, Router } from 'express';
+import { checkExact, checkSchema, matchedData, Schema, validationResult } from 'express-validator';
+import { options } from '@freight/common-router-options';
+import { userTypeValidationSchemaReadUserType } from '@freight/persona-router-validation-schemas';
+import { userTypeController } from '@app/api/controllers/userTypeController';
+
+export const userTypeRouterReadUserType = Router(options).get(
+  '/',
+  checkSchema(<Schema>userTypeValidationSchemaReadUserType),
+  checkExact(),
+  async (req: Request, res: Response) => {
+    const errors = validationResult(req);
+
+    if (errors.isEmpty()) {
+      const { userTypeId } = matchedData(req);
+      const userType = await userTypeController.readUserType({ userTypeId });
+
+      res.status(200).send({ userType });
+    } else {
+      res.status(404).send({ error: errors.array() });
+    }
+  },
+);

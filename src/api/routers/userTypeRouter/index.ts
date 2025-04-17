@@ -1,0 +1,1 @@
+export { userTypeRouter } from './userTypeRouter';

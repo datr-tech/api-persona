@@ -1,0 +1,1 @@
+export { organisationTypeRouter } from './organisationTypeRouter';
