@@ -1,8 +1,14 @@
+import { organisationTypeController } from '@app-ap/api/controllers/organisationTypeController';
+import { organisationTypeValidationSchemaUpdateOrganisationType } from '@datr.tech/cargo-router-validation-schemas-persona';
+import { options } from '@datr.tech/leith-config-api-router-options';
 import { Request, Response, Router } from 'express';
-import { checkExact, checkSchema, matchedData, Schema, validationResult } from 'express-validator';
-import { options } from '@freight/common-router-options';
-import { organisationTypeValidationSchemaUpdateOrganisationType } from '@freight/persona-router-validation-schemas';
-import { organisationTypeController } from '@app/api/controllers/organisationTypeController';
+import {
+  checkExact,
+  checkSchema,
+  matchedData,
+  Schema,
+  validationResult,
+} from 'express-validator';
 
 export const organisationTypeRouterUpdateOrganisationType = Router(options).patch(
   '/',
@@ -13,7 +19,10 @@ export const organisationTypeRouterUpdateOrganisationType = Router(options).patc
 
     if (errors.isEmpty()) {
       const { organisationTypeId, ...payload } = matchedData(req);
-      const updateStatus = await organisationTypeController.updateOrganisationType({ organisationTypeId, payload });
+      const updateStatus = await organisationTypeController.updateOrganisationType({
+        organisationTypeId,
+        payload,
+      });
 
       res.status(200).send({ updateStatus });
     } else {

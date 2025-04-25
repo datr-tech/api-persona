@@ -1,6 +1,12 @@
+import {
+  modelValidatorAdminStatusId,
+  modelValidatorAdminUserId,
+} from '@app-ap/api/modelValidators';
+import {
+  roleModelSchema,
+  roleModelSchemaOptions,
+} from '@datr.tech/parcel-model-schemas-persona';
 import { model, Schema } from 'mongoose';
-import { roleModelSchema, roleModelSchemaOptions } from '@freight/persona-model-schemas';
-import { modelValidatorAdminStatusId, modelValidatorAdminUserId } from '@app/api/modelValidators';
 
 const roleSchema = new Schema(roleModelSchema, roleModelSchemaOptions);
 

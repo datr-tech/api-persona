@@ -1,6 +1,9 @@
-import { OrganisationRoleModel } from '@app/api/models';
+import { OrganisationRoleModel } from '@app-ap/api/models';
 
-export const organisationRoleControllerUpdateOrganisationRole = async ({ organisationRoleId, payload }) => {
+export const organisationRoleControllerUpdateOrganisationRole = async ({
+  organisationRoleId,
+  payload,
+}) => {
   const res = await OrganisationRoleModel.findOneAndUpdate(
     {
       _id: organisationRoleId,

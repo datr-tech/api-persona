@@ -1,5 +1,5 @@
+import { OrganisationModel } from '@app-ap/api/models';
 import { Types } from 'mongoose';
-import { OrganisationModel } from '@app/api/models';
 
 export const organisationControllerDeleteOrganisation = async ({ organisationId }) => {
   const res = await OrganisationModel.findOneAndUpdate(

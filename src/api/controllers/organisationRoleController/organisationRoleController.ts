@@ -1,7 +1,7 @@
 import { organisationRoleControllerCreateOrganisationRole } from './organisationRoleControllerCreateOrganisationRole';
-import { organisationRoleControllerUpdateOrganisationRole } from './organisationRoleControllerUpdateOrganisationRole';
-import { organisationRoleControllerReadOrganisationRole } from './organisationRoleControllerReadOrganisationRole';
 import { organisationRoleControllerDeleteOrganisationRole } from './organisationRoleControllerDeleteOrganisationRole';
+import { organisationRoleControllerReadOrganisationRole } from './organisationRoleControllerReadOrganisationRole';
+import { organisationRoleControllerUpdateOrganisationRole } from './organisationRoleControllerUpdateOrganisationRole';
 
 export const organisationRoleController = {
   createOrganisationRole: organisationRoleControllerCreateOrganisationRole,

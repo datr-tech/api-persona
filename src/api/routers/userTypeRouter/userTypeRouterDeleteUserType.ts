@@ -1,8 +1,14 @@
+import { userTypeController } from '@app-ap/api/controllers/userTypeController';
+import { userTypeValidationSchemaDeleteUserType } from '@datr.tech/cargo-router-validation-schemas-persona';
+import { options } from '@datr.tech/leith-config-api-router-options';
 import { Request, Response, Router } from 'express';
-import { checkExact, checkSchema, matchedData, Schema, validationResult } from 'express-validator';
-import { options } from '@freight/common-router-options';
-import { userTypeValidationSchemaDeleteUserType } from '@freight/persona-router-validation-schemas';
-import { userTypeController } from '@app/api/controllers/userTypeController';
+import {
+  checkExact,
+  checkSchema,
+  matchedData,
+  Schema,
+  validationResult,
+} from 'express-validator';
 
 export const userTypeRouterDeleteUserType = Router(options).get(
   '/',

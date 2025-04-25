@@ -1,7 +1,9 @@
+import { OrganisationUserModel } from '@app-ap/api/models';
 import { Types } from 'mongoose';
-import { OrganisationUserModel } from '@app/api/models';
 
-export const organisationUserControllerDeleteOrganisationUser = async ({ organisationUserId }) => {
+export const organisationUserControllerDeleteOrganisationUser = async ({
+  organisationUserId,
+}) => {
   const res = await OrganisationUserModel.findOneAndUpdate(
     {
       _id: organisationUserId,

@@ -1,6 +1,9 @@
-import { OrganisationTypeModel } from '@app/api/models';
+import { OrganisationTypeModel } from '@app-ap/api/models';
 
-export const organisationTypeControllerUpdateOrganisationType = async ({ organisationTypeId, payload }) => {
+export const organisationTypeControllerUpdateOrganisationType = async ({
+  organisationTypeId,
+  payload,
+}) => {
   const res = await OrganisationTypeModel.findOneAndUpdate(
     {
       _id: organisationTypeId,

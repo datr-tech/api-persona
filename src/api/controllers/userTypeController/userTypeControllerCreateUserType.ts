@@ -1,7 +1,12 @@
+import { UserTypeModel } from '@app-ap/api/models';
 import { Types } from 'mongoose';
-import { UserTypeModel } from '@app/api/models';
 
-export const userTypeControllerCreateUserType = async ({ description, name, adminStatusId, adminUserId }) => {
+export const userTypeControllerCreateUserType = async ({
+  description,
+  name,
+  adminStatusId,
+  adminUserId,
+}) => {
   const userTypeId = new Types.ObjectId();
   const modelParams = {
     userTypeId,

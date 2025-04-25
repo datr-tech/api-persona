@@ -1,5 +1,5 @@
+import { UserModel } from '@app-ap/api/models';
 import { Types } from 'mongoose';
-import { UserModel } from '@app/api/models';
 
 export const userControllerDeleteUser = async ({ userId }) => {
   const res = await UserModel.findOneAndUpdate(

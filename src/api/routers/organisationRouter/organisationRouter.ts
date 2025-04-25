@@ -1,5 +1,5 @@
+import { options } from '@datr.tech/leith-config-api-router-options';
 import { Router } from 'express';
-import { options } from '@freight/common-router-options';
 import { organisationRouterCreateOrganisation } from './organisationRouterCreateOrganisation';
 import { organisationRouterDeleteOrganisation } from './organisationRouterDeleteOrganisation';
 import { organisationRouterReadOrganisation } from './organisationRouterReadOrganisation';

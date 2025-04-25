@@ -1,9 +1,15 @@
+import { organisationUserController } from '@app-ap/api/controllers/organisationUserController';
+import { IOrganisationUserModel } from '@app-ap/interfaces/api/models/IOrganisationUserModel';
+import { organisationUserValidationSchemaCreateOrganisationUser } from '@datr.tech/cargo-router-validation-schemas-persona';
+import { options } from '@datr.tech/leith-config-api-router-options';
 import { Request, Response, Router } from 'express';
-import { checkExact, checkSchema, matchedData, Schema, validationResult } from 'express-validator';
-import { options } from '@freight/common-router-options';
-import { organisationUserValidationSchemaCreateOrganisationUser } from '@freight/persona-router-validation-schemas';
-import { organisationUserController } from '@app/api/controllers/organisationUserController';
-import { IOrganisationUserModel } from '@app/interfaces/api/models/IOrganisationUserModel';
+import {
+  checkExact,
+  checkSchema,
+  matchedData,
+  Schema,
+  validationResult,
+} from 'express-validator';
 
 export const organisationUserRouterCreateOrganisationUser = Router(options).post(
   '/',
@@ -14,7 +20,8 @@ export const organisationUserRouterCreateOrganisationUser = Router(options).post
 
     if (errors.isEmpty()) {
       const validatedParams = matchedData<IOrganisationUserModel>(req);
-      const organisationUserId = await organisationUserController.createOrganisationUser(validatedParams);
+      const organisationUserId =
+        await organisationUserController.createOrganisationUser(validatedParams);
 
       res.status(201).send({ organisationUserId });
     } else {

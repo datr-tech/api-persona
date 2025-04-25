@@ -1,17 +1,26 @@
-import { model, Schema } from 'mongoose';
-import { organisationUserModelSchema, organisationUserModelSchemaOptions } from '@freight/persona-model-schemas';
 import {
-  modelValidatorOrganisationId,
-  modelValidatorUserId,
   modelValidatorAdminStatusId,
   modelValidatorAdminUserId,
-} from '@app/api/modelValidators';
+  modelValidatorOrganisationId,
+  modelValidatorUserId,
+} from '@app-ap/api/modelValidators';
+import {
+  organisationUserModelSchema,
+  organisationUserModelSchemaOptions,
+} from '@datr.tech/parcel-model-schemas-persona';
+import { model, Schema } from 'mongoose';
 
-const organisationUserSchema = new Schema(organisationUserModelSchema, organisationUserModelSchemaOptions);
+const organisationUserSchema = new Schema(
+  organisationUserModelSchema,
+  organisationUserModelSchemaOptions,
+);
 
 organisationUserSchema.post('validate', modelValidatorOrganisationId);
 organisationUserSchema.post('validate', modelValidatorUserId);
 organisationUserSchema.post('validate', modelValidatorAdminStatusId);
 organisationUserSchema.post('validate', modelValidatorAdminUserId);
 
-export const OrganisationUserModel = model('OrganisationUserModel', organisationUserSchema);
+export const OrganisationUserModel = model(
+  'OrganisationUserModel',
+  organisationUserSchema,
+);

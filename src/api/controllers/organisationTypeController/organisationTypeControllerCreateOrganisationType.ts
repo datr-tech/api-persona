@@ -1,7 +1,12 @@
+import { OrganisationTypeModel } from '@app-ap/api/models';
 import { Types } from 'mongoose';
-import { OrganisationTypeModel } from '@app/api/models';
 
-export const organisationTypeControllerCreateOrganisationType = async ({ description, name, adminStatusId, adminUserId }) => {
+export const organisationTypeControllerCreateOrganisationType = async ({
+  description,
+  name,
+  adminStatusId,
+  adminUserId,
+}) => {
   const organisationTypeId = new Types.ObjectId();
   const modelParams = {
     organisationTypeId,

@@ -1,9 +1,15 @@
+import { roleController } from '@app-ap/api/controllers/roleController';
+import { IRoleModel } from '@app-ap/interfaces/api/models/IRoleModel';
+import { roleValidationSchemaCreateRole } from '@datr.tech/cargo-router-validation-schemas-persona';
+import { options } from '@datr.tech/leith-config-api-router-options';
 import { Request, Response, Router } from 'express';
-import { checkExact, checkSchema, matchedData, Schema, validationResult } from 'express-validator';
-import { options } from '@freight/common-router-options';
-import { roleValidationSchemaCreateRole } from '@freight/persona-router-validation-schemas';
-import { roleController } from '@app/api/controllers/roleController';
-import { IRoleModel } from '@app/interfaces/api/models/IRoleModel';
+import {
+  checkExact,
+  checkSchema,
+  matchedData,
+  Schema,
+  validationResult,
+} from 'express-validator';
 
 export const roleRouterCreateRole = Router(options).post(
   '/',

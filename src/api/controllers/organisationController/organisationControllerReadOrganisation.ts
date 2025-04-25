@@ -1,4 +1,4 @@
-import { OrganisationModel } from '@app/api/models';
+import { OrganisationModel } from '@app-ap/api/models';
 
 export const organisationControllerReadOrganisation = async ({ organisationId }) => {
   const organisation = await OrganisationModel.findById(organisationId);

@@ -1,8 +1,14 @@
+import { organisationUserController } from '@app-ap/api/controllers/organisationUserController';
+import { organisationUserValidationSchemaReadOrganisationUser } from '@datr.tech/cargo-router-validation-schemas-persona';
+import { options } from '@datr.tech/leith-config-api-router-options';
 import { Request, Response, Router } from 'express';
-import { checkExact, checkSchema, matchedData, Schema, validationResult } from 'express-validator';
-import { options } from '@freight/common-router-options';
-import { organisationUserValidationSchemaReadOrganisationUser } from '@freight/persona-router-validation-schemas';
-import { organisationUserController } from '@app/api/controllers/organisationUserController';
+import {
+  checkExact,
+  checkSchema,
+  matchedData,
+  Schema,
+  validationResult,
+} from 'express-validator';
 
 export const organisationUserRouterReadOrganisationUser = Router(options).get(
   '/',
@@ -13,7 +19,9 @@ export const organisationUserRouterReadOrganisationUser = Router(options).get(
 
     if (errors.isEmpty()) {
       const { organisationUserId } = matchedData(req);
-      const organisationUser = await organisationUserController.readOrganisationUser({ organisationUserId });
+      const organisationUser = await organisationUserController.readOrganisationUser({
+        organisationUserId,
+      });
 
       res.status(200).send({ organisationUser });
     } else {

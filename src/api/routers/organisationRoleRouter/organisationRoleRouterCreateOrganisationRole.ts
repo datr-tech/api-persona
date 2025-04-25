@@ -1,9 +1,15 @@
+import { organisationRoleController } from '@app-ap/api/controllers/organisationRoleController';
+import { IOrganisationRoleModel } from '@app-ap/interfaces/api/models/IOrganisationRoleModel';
+import { organisationRoleValidationSchemaCreateOrganisationRole } from '@datr.tech/cargo-router-validation-schemas-persona';
+import { options } from '@datr.tech/leith-config-api-router-options';
 import { Request, Response, Router } from 'express';
-import { checkExact, checkSchema, matchedData, Schema, validationResult } from 'express-validator';
-import { options } from '@freight/common-router-options';
-import { organisationRoleValidationSchemaCreateOrganisationRole } from '@freight/persona-router-validation-schemas';
-import { organisationRoleController } from '@app/api/controllers/organisationRoleController';
-import { IOrganisationRoleModel } from '@app/interfaces/api/models/IOrganisationRoleModel';
+import {
+  checkExact,
+  checkSchema,
+  matchedData,
+  Schema,
+  validationResult,
+} from 'express-validator';
 
 export const organisationRoleRouterCreateOrganisationRole = Router(options).post(
   '/',
@@ -14,7 +20,8 @@ export const organisationRoleRouterCreateOrganisationRole = Router(options).post
 
     if (errors.isEmpty()) {
       const validatedParams = matchedData<IOrganisationRoleModel>(req);
-      const organisationRoleId = await organisationRoleController.createOrganisationRole(validatedParams);
+      const organisationRoleId =
+        await organisationRoleController.createOrganisationRole(validatedParams);
 
       res.status(201).send({ organisationRoleId });
     } else {

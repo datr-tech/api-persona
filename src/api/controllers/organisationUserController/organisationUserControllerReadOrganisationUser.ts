@@ -1,6 +1,8 @@
-import { OrganisationUserModel } from '@app/api/models';
+import { OrganisationUserModel } from '@app-ap/api/models';
 
-export const organisationUserControllerReadOrganisationUser = async ({ organisationUserId }) => {
+export const organisationUserControllerReadOrganisationUser = async ({
+  organisationUserId,
+}) => {
   const organisationUser = await OrganisationUserModel.findById(organisationUserId);
 
   return organisationUser;

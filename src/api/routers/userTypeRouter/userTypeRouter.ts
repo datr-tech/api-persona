@@ -1,5 +1,5 @@
+import { options } from '@datr.tech/leith-config-api-router-options';
 import { Router } from 'express';
-import { options } from '@freight/common-router-options';
 import { userTypeRouterCreateUserType } from './userTypeRouterCreateUserType';
 import { userTypeRouterDeleteUserType } from './userTypeRouterDeleteUserType';
 import { userTypeRouterReadUserType } from './userTypeRouterReadUserType';

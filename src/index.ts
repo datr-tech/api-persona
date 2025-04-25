@@ -1,14 +1,12 @@
+import { app } from '@app-ap/api';
+import { apiName, apiPort } from '@app-ap/config';
+import { logger } from '@datr.tech/leith-common-logger';
 import 'dotenv/config';
-import { logger } from '@freight/common-logger';
-import { db } from '@freight/common-mongodb-connector';
-import { app } from '@app/api';
 
-const { API_NAME, API_PORT } = process.env;
-
-app.listen(API_PORT, () => {
-  logger.info(`${API_NAME} listening on ${API_PORT}`);
+app.listen(apiPort, () => {
+  logger.info(`${apiName} listening on ${apiPort}`);
 
   (async () => {
-    await db.connect();
+    //await db.connect();
   })();
 });

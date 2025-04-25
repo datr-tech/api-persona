@@ -1,5 +1,5 @@
+import { OrganisationRoleModel } from '@app-ap/api/models';
 import { Types } from 'mongoose';
-import { OrganisationRoleModel } from '@app/api/models';
 
 export const organisationRoleControllerCreateOrganisationRole = async ({
   organisationId,

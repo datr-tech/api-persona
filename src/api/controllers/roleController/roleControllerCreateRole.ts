@@ -1,7 +1,12 @@
+import { RoleModel } from '@app-ap/api/models';
 import { Types } from 'mongoose';
-import { RoleModel } from '@app/api/models';
 
-export const roleControllerCreateRole = async ({ description, name, adminStatusId, adminUserId }) => {
+export const roleControllerCreateRole = async ({
+  description,
+  name,
+  adminStatusId,
+  adminUserId,
+}) => {
   const roleId = new Types.ObjectId();
   const modelParams = {
     roleId,

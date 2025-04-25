@@ -1,9 +1,15 @@
+import { organisationTypeController } from '@app-ap/api/controllers/organisationTypeController';
+import { IOrganisationTypeModel } from '@app-ap/interfaces/api/models/IOrganisationTypeModel';
+import { organisationTypeValidationSchemaCreateOrganisationType } from '@datr.tech/cargo-router-validation-schemas-persona';
+import { options } from '@datr.tech/leith-config-api-router-options';
 import { Request, Response, Router } from 'express';
-import { checkExact, checkSchema, matchedData, Schema, validationResult } from 'express-validator';
-import { options } from '@freight/common-router-options';
-import { organisationTypeValidationSchemaCreateOrganisationType } from '@freight/persona-router-validation-schemas';
-import { organisationTypeController } from '@app/api/controllers/organisationTypeController';
-import { IOrganisationTypeModel } from '@app/interfaces/api/models/IOrganisationTypeModel';
+import {
+  checkExact,
+  checkSchema,
+  matchedData,
+  Schema,
+  validationResult,
+} from 'express-validator';
 
 export const organisationTypeRouterCreateOrganisationType = Router(options).post(
   '/',
@@ -14,7 +20,8 @@ export const organisationTypeRouterCreateOrganisationType = Router(options).post
 
     if (errors.isEmpty()) {
       const validatedParams = matchedData<IOrganisationTypeModel>(req);
-      const organisationTypeId = await organisationTypeController.createOrganisationType(validatedParams);
+      const organisationTypeId =
+        await organisationTypeController.createOrganisationType(validatedParams);
 
       res.status(201).send({ organisationTypeId });
     } else {

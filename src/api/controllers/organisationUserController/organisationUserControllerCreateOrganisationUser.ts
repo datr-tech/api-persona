@@ -1,5 +1,5 @@
+import { OrganisationUserModel } from '@app-ap/api/models';
 import { Types } from 'mongoose';
-import { OrganisationUserModel } from '@app/api/models';
 
 export const organisationUserControllerCreateOrganisationUser = async ({
   organisationId,

@@ -1,5 +1,5 @@
+import { RoleModel } from '@app-ap/api/models';
 import { Types } from 'mongoose';
-import { RoleModel } from '@app/api/models';
 
 export const roleControllerDeleteRole = async ({ roleId }) => {
   const res = await RoleModel.findOneAndUpdate(

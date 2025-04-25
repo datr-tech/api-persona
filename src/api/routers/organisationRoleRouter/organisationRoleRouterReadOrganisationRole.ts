@@ -1,8 +1,14 @@
+import { organisationRoleController } from '@app-ap/api/controllers/organisationRoleController';
+import { organisationRoleValidationSchemaReadOrganisationRole } from '@datr.tech/cargo-router-validation-schemas-persona';
+import { options } from '@datr.tech/leith-config-api-router-options';
 import { Request, Response, Router } from 'express';
-import { checkExact, checkSchema, matchedData, Schema, validationResult } from 'express-validator';
-import { options } from '@freight/common-router-options';
-import { organisationRoleValidationSchemaReadOrganisationRole } from '@freight/persona-router-validation-schemas';
-import { organisationRoleController } from '@app/api/controllers/organisationRoleController';
+import {
+  checkExact,
+  checkSchema,
+  matchedData,
+  Schema,
+  validationResult,
+} from 'express-validator';
 
 export const organisationRoleRouterReadOrganisationRole = Router(options).get(
   '/',
@@ -13,7 +19,9 @@ export const organisationRoleRouterReadOrganisationRole = Router(options).get(
 
     if (errors.isEmpty()) {
       const { organisationRoleId } = matchedData(req);
-      const organisationRole = await organisationRoleController.readOrganisationRole({ organisationRoleId });
+      const organisationRole = await organisationRoleController.readOrganisationRole({
+        organisationRoleId,
+      });
 
       res.status(200).send({ organisationRole });
     } else {

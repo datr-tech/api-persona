@@ -1,5 +1,5 @@
+import { options } from '@datr.tech/leith-config-api-router-options';
 import { Router } from 'express';
-import { options } from '@freight/common-router-options';
 import { roleRouterCreateRole } from './roleRouterCreateRole';
 import { roleRouterDeleteRole } from './roleRouterDeleteRole';
 import { roleRouterReadRole } from './roleRouterReadRole';

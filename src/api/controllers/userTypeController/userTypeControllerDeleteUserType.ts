@@ -1,5 +1,5 @@
+import { UserTypeModel } from '@app-ap/api/models';
 import { Types } from 'mongoose';
-import { UserTypeModel } from '@app/api/models';
 
 export const userTypeControllerDeleteUserType = async ({ userTypeId }) => {
   const res = await UserTypeModel.findOneAndUpdate(

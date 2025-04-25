@@ -1,7 +1,7 @@
 import { roleControllerCreateRole } from './roleControllerCreateRole';
-import { roleControllerUpdateRole } from './roleControllerUpdateRole';
-import { roleControllerReadRole } from './roleControllerReadRole';
 import { roleControllerDeleteRole } from './roleControllerDeleteRole';
+import { roleControllerReadRole } from './roleControllerReadRole';
+import { roleControllerUpdateRole } from './roleControllerUpdateRole';
 
 export const roleController = {
   createRole: roleControllerCreateRole,

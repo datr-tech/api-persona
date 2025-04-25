@@ -1,7 +1,7 @@
 import { userSessionControllerCreateUserSession } from './userSessionControllerCreateUserSession';
-import { userSessionControllerUpdateUserSession } from './userSessionControllerUpdateUserSession';
-import { userSessionControllerReadUserSession } from './userSessionControllerReadUserSession';
 import { userSessionControllerDeleteUserSession } from './userSessionControllerDeleteUserSession';
+import { userSessionControllerReadUserSession } from './userSessionControllerReadUserSession';
+import { userSessionControllerUpdateUserSession } from './userSessionControllerUpdateUserSession';
 
 export const userSessionController = {
   createUserSession: userSessionControllerCreateUserSession,

@@ -1,7 +1,7 @@
 import { userControllerCreateUser } from './userControllerCreateUser';
-import { userControllerUpdateUser } from './userControllerUpdateUser';
-import { userControllerReadUser } from './userControllerReadUser';
 import { userControllerDeleteUser } from './userControllerDeleteUser';
+import { userControllerReadUser } from './userControllerReadUser';
+import { userControllerUpdateUser } from './userControllerUpdateUser';
 
 export const userController = {
   createUser: userControllerCreateUser,

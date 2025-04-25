@@ -1,9 +1,15 @@
+import { userController } from '@app-ap/api/controllers/userController';
+import { IUserModel } from '@app-ap/interfaces/api/models/IUserModel';
+import { userValidationSchemaCreateUser } from '@datr.tech/cargo-router-validation-schemas-persona';
+import { options } from '@datr.tech/leith-config-api-router-options';
 import { Request, Response, Router } from 'express';
-import { checkExact, checkSchema, matchedData, Schema, validationResult } from 'express-validator';
-import { options } from '@freight/common-router-options';
-import { userValidationSchemaCreateUser } from '@freight/persona-router-validation-schemas';
-import { userController } from '@app/api/controllers/userController';
-import { IUserModel } from '@app/interfaces/api/models/IUserModel';
+import {
+  checkExact,
+  checkSchema,
+  matchedData,
+  Schema,
+  validationResult,
+} from 'express-validator';
 
 export const userRouterCreateUser = Router(options).post(
   '/',

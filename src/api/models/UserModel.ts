@@ -1,6 +1,13 @@
+import {
+  modelValidatorAdminStatusId,
+  modelValidatorAdminUserId,
+  modelValidatorUserTypeId,
+} from '@app-ap/api/modelValidators';
+import {
+  userModelSchema,
+  userModelSchemaOptions,
+} from '@datr.tech/parcel-model-schemas-persona';
 import { model, Schema } from 'mongoose';
-import { userModelSchema, userModelSchemaOptions } from '@freight/persona-model-schemas';
-import { modelValidatorUserTypeId, modelValidatorAdminStatusId, modelValidatorAdminUserId } from '@app/api/modelValidators';
 
 const userSchema = new Schema(userModelSchema, userModelSchemaOptions);
 

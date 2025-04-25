@@ -1,4 +1,4 @@
-import { UserModel } from '@app/api/models';
+import { UserModel } from '@app-ap/api/models';
 
 export const modelValidatorAdminUserId = async (doc, next) => {
   let adminUserId;

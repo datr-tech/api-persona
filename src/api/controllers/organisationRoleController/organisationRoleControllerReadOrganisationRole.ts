@@ -1,6 +1,8 @@
-import { OrganisationRoleModel } from '@app/api/models';
+import { OrganisationRoleModel } from '@app-ap/api/models';
 
-export const organisationRoleControllerReadOrganisationRole = async ({ organisationRoleId }) => {
+export const organisationRoleControllerReadOrganisationRole = async ({
+  organisationRoleId,
+}) => {
   const organisationRole = await OrganisationRoleModel.findById(organisationRoleId);
 
   return organisationRole;

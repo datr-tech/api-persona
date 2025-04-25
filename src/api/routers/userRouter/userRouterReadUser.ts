@@ -1,8 +1,14 @@
+import { userController } from '@app-ap/api/controllers/userController';
+import { userValidationSchemaReadUser } from '@datr.tech/cargo-router-validation-schemas-persona';
+import { options } from '@datr.tech/leith-config-api-router-options';
 import { Request, Response, Router } from 'express';
-import { checkExact, checkSchema, matchedData, Schema, validationResult } from 'express-validator';
-import { options } from '@freight/common-router-options';
-import { userValidationSchemaReadUser } from '@freight/persona-router-validation-schemas';
-import { userController } from '@app/api/controllers/userController';
+import {
+  checkExact,
+  checkSchema,
+  matchedData,
+  Schema,
+  validationResult,
+} from 'express-validator';
 
 export const userRouterReadUser = Router(options).get(
   '/',

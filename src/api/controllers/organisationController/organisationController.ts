@@ -1,7 +1,7 @@
 import { organisationControllerCreateOrganisation } from './organisationControllerCreateOrganisation';
-import { organisationControllerUpdateOrganisation } from './organisationControllerUpdateOrganisation';
-import { organisationControllerReadOrganisation } from './organisationControllerReadOrganisation';
 import { organisationControllerDeleteOrganisation } from './organisationControllerDeleteOrganisation';
+import { organisationControllerReadOrganisation } from './organisationControllerReadOrganisation';
+import { organisationControllerUpdateOrganisation } from './organisationControllerUpdateOrganisation';
 
 export const organisationController = {
   createOrganisation: organisationControllerCreateOrganisation,

@@ -1,8 +1,14 @@
+import { userSessionController } from '@app-ap/api/controllers/userSessionController';
+import { userSessionValidationSchemaUpdateUserSession } from '@datr.tech/cargo-router-validation-schemas-persona';
+import { options } from '@datr.tech/leith-config-api-router-options';
 import { Request, Response, Router } from 'express';
-import { checkExact, checkSchema, matchedData, Schema, validationResult } from 'express-validator';
-import { options } from '@freight/common-router-options';
-import { userSessionValidationSchemaUpdateUserSession } from '@freight/persona-router-validation-schemas';
-import { userSessionController } from '@app/api/controllers/userSessionController';
+import {
+  checkExact,
+  checkSchema,
+  matchedData,
+  Schema,
+  validationResult,
+} from 'express-validator';
 
 export const userSessionRouterUpdateUserSession = Router(options).patch(
   '/',
@@ -13,7 +19,10 @@ export const userSessionRouterUpdateUserSession = Router(options).patch(
 
     if (errors.isEmpty()) {
       const { userSessionId, ...payload } = matchedData(req);
-      const updateStatus = await userSessionController.updateUserSession({ userSessionId, payload });
+      const updateStatus = await userSessionController.updateUserSession({
+        userSessionId,
+        payload,
+      });
 
       res.status(200).send({ updateStatus });
     } else {

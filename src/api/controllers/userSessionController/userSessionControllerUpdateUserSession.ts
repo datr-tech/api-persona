@@ -1,6 +1,9 @@
-import { UserSessionModel } from '@app/api/models';
+import { UserSessionModel } from '@app-ap/api/models';
 
-export const userSessionControllerUpdateUserSession = async ({ userSessionId, payload }) => {
+export const userSessionControllerUpdateUserSession = async ({
+  userSessionId,
+  payload,
+}) => {
   const res = await UserSessionModel.findOneAndUpdate(
     {
       _id: userSessionId,

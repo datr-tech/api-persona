@@ -1,8 +1,18 @@
+import {
+  modelValidatorAdminStatusId,
+  modelValidatorAdminUserId,
+  modelValidatorUserId,
+} from '@app-ap/api/modelValidators';
+import {
+  userSessionModelSchema,
+  userSessionModelSchemaOptions,
+} from '@datr.tech/parcel-model-schemas-persona';
 import { model, Schema } from 'mongoose';
-import { userSessionModelSchema, userSessionModelSchemaOptions } from '@freight/persona-model-schemas';
-import { modelValidatorUserId, modelValidatorAdminStatusId, modelValidatorAdminUserId } from '@app/api/modelValidators';
 
-const userSessionSchema = new Schema(userSessionModelSchema, userSessionModelSchemaOptions);
+const userSessionSchema = new Schema(
+  userSessionModelSchema,
+  userSessionModelSchemaOptions,
+);
 
 userSessionSchema.post('validate', modelValidatorUserId);
 userSessionSchema.post('validate', modelValidatorAdminStatusId);

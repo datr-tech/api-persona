@@ -1,4 +1,4 @@
-import { RoleModel } from '@app/api/models';
+import { RoleModel } from '@app-ap/api/models';
 
 export const roleControllerReadRole = async ({ roleId }) => {
   const role = await RoleModel.findById(roleId);

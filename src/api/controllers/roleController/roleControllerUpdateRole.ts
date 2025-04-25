@@ -1,4 +1,4 @@
-import { RoleModel } from '@app/api/models';
+import { RoleModel } from '@app-ap/api/models';
 
 export const roleControllerUpdateRole = async ({ roleId, payload }) => {
   const res = await RoleModel.findOneAndUpdate(

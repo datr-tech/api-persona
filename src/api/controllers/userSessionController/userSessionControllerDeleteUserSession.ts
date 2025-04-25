@@ -1,5 +1,5 @@
+import { UserSessionModel } from '@app-ap/api/models';
 import { Types } from 'mongoose';
-import { UserSessionModel } from '@app/api/models';
 
 export const userSessionControllerDeleteUserSession = async ({ userSessionId }) => {
   const res = await UserSessionModel.findOneAndUpdate(

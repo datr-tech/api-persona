@@ -1,4 +1,4 @@
-import { OrganisationModel } from '@app/api/models';
+import { OrganisationModel } from '@app-ap/api/models';
 
 export const modelValidatorOrganisationId = async (doc, next) => {
   let organisation;

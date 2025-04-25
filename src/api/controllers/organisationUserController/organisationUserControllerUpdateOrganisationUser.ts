@@ -1,6 +1,9 @@
-import { OrganisationUserModel } from '@app/api/models';
+import { OrganisationUserModel } from '@app-ap/api/models';
 
-export const organisationUserControllerUpdateOrganisationUser = async ({ organisationUserId, payload }) => {
+export const organisationUserControllerUpdateOrganisationUser = async ({
+  organisationUserId,
+  payload,
+}) => {
   const res = await OrganisationUserModel.findOneAndUpdate(
     {
       _id: organisationUserId,
