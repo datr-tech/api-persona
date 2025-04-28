@@ -1,1 +1,0 @@
-export { roleController } from './roleController';

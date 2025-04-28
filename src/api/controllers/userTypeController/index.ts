@@ -1,1 +1,0 @@
-export { userTypeController } from './userTypeController';

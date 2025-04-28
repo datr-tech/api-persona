@@ -1,1 +1,0 @@
-export { organisationTypeController } from './organisationTypeController';
