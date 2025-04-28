@@ -1,0 +1,6 @@
+import { IOrganisationRoleControllerReadOrganisationRoleOutputError } from './IOrganisationRoleControllerReadOrganisationRoleOutputError';
+import { IOrganisationRoleControllerReadOrganisationRoleOutputSuccess } from './IOrganisationRoleControllerReadOrganisationRoleOutputSuccess';
+
+export type IOrganisationRoleControllerReadOrganisationRoleOutput =
+  | IOrganisationRoleControllerReadOrganisationRoleOutputSuccess
+  | IOrganisationRoleControllerReadOrganisationRoleOutputError;

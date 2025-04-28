@@ -1,0 +1,6 @@
+import { IOrganisationUserControllerUpdateOrganisationUserOutputError } from './IOrganisationUserControllerUpdateOrganisationUserOutputError';
+import { IOrganisationUserControllerUpdateOrganisationUserOutputSuccess } from './IOrganisationUserControllerUpdateOrganisationUserOutputSuccess';
+
+export type IOrganisationUserControllerUpdateOrganisationUserOutput =
+  | IOrganisationUserControllerUpdateOrganisationUserOutputSuccess
+  | IOrganisationUserControllerUpdateOrganisationUserOutputError;

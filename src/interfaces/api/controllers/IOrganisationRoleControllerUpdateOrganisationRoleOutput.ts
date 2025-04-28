@@ -1,0 +1,6 @@
+import { IOrganisationRoleControllerUpdateOrganisationRoleOutputError } from './IOrganisationRoleControllerUpdateOrganisationRoleOutputError';
+import { IOrganisationRoleControllerUpdateOrganisationRoleOutputSuccess } from './IOrganisationRoleControllerUpdateOrganisationRoleOutputSuccess';
+
+export type IOrganisationRoleControllerUpdateOrganisationRoleOutput =
+  | IOrganisationRoleControllerUpdateOrganisationRoleOutputSuccess
+  | IOrganisationRoleControllerUpdateOrganisationRoleOutputError;

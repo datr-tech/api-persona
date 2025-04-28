@@ -1,0 +1,6 @@
+import { IOrganisationControllerDeleteOrganisationOutputError } from './IOrganisationControllerDeleteOrganisationOutputError';
+import { IOrganisationControllerDeleteOrganisationOutputSuccess } from './IOrganisationControllerDeleteOrganisationOutputSuccess';
+
+export type IOrganisationControllerDeleteOrganisationOutput =
+  | IOrganisationControllerDeleteOrganisationOutputSuccess
+  | IOrganisationControllerDeleteOrganisationOutputError;

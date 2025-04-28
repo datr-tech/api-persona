@@ -1,0 +1,6 @@
+import { IOrganisationTypeControllerCreateOrganisationTypeOutputError } from './IOrganisationTypeControllerCreateOrganisationTypeOutputError';
+import { IOrganisationTypeControllerCreateOrganisationTypeOutputSuccess } from './IOrganisationTypeControllerCreateOrganisationTypeOutputSuccess';
+
+export type IOrganisationTypeControllerCreateOrganisationTypeOutput =
+  | IOrganisationTypeControllerCreateOrganisationTypeOutputSuccess
+  | IOrganisationTypeControllerCreateOrganisationTypeOutputError;
