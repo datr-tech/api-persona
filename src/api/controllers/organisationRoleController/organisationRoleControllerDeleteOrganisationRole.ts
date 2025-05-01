@@ -33,7 +33,7 @@ export const organisationRoleControllerDeleteOrganisationRole: IOrganisationRole
        * found model by updating the value of the model's
        * 'adminStatusId' field.
        */
-      const organisationRoleModel = await OrganisationRoleModel.findOneAndUpdate(
+      await OrganisationRoleModel.findOneAndUpdate(
         {
           _id: organisationRoleId,
         },

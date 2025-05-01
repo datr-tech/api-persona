@@ -33,7 +33,7 @@ export const userTypeControllerDeleteUserType: IUserTypeControllerDeleteUserType
        * found model by updating the value of the model's
        * 'adminStatusId' field.
        */
-      const userTypeModel = await UserTypeModel.findOneAndUpdate(
+      await UserTypeModel.findOneAndUpdate(
         {
           _id: userTypeId,
         },

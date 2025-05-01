@@ -1,13 +1,17 @@
 import {
   modelValidatorAdminStatusId,
   modelValidatorAdminUserId,
-  modelValidatorOrganisationId,
-  modelValidatorRoleId,
-} from '@app-ap/api/modelValidators';
+} from '@app-ap/api/modelValidators/foreign';
+
+import { modelValidatorOrganisationId } from '@app-ap/api/modelValidators/local/modelValidatorOrganisationId';
+
+import { modelValidatorRoleId } from '@app-ap/api/modelValidators/local/modelValidatorRoleId';
+
 import {
   organisationRoleModelSchema,
   organisationRoleModelSchemaOptions,
 } from '@datr.tech/parcel-model-schemas-persona';
+
 import { model, Schema } from 'mongoose';
 
 const organisationRoleSchema = new Schema(

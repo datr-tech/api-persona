@@ -1,12 +1,15 @@
 import {
   modelValidatorAdminStatusId,
   modelValidatorAdminUserId,
-  modelValidatorUserId,
-} from '@app-ap/api/modelValidators';
+} from '@app-ap/api/modelValidators/foreign';
+
+import { modelValidatorUserId } from '@app-ap/api/modelValidators/local/modelValidatorUserId';
+
 import {
   userSessionModelSchema,
   userSessionModelSchemaOptions,
 } from '@datr.tech/parcel-model-schemas-persona';
+
 import { model, Schema } from 'mongoose';
 
 const userSessionSchema = new Schema(

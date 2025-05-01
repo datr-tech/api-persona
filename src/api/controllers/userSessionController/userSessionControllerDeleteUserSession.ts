@@ -33,7 +33,7 @@ export const userSessionControllerDeleteUserSession: IUserSessionControllerDelet
        * found model by updating the value of the model's
        * 'adminStatusId' field.
        */
-      const userSessionModel = await UserSessionModel.findOneAndUpdate(
+      await UserSessionModel.findOneAndUpdate(
         {
           _id: userSessionId,
         },

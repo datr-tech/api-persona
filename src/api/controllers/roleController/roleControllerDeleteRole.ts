@@ -32,7 +32,7 @@ export const roleControllerDeleteRole: IRoleControllerDeleteRole = async ({ role
      * found model by updating the value of the model's
      * 'adminStatusId' field.
      */
-    const roleModel = await RoleModel.findOneAndUpdate(
+    await RoleModel.findOneAndUpdate(
       {
         _id: roleId,
       },

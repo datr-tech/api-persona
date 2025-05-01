@@ -32,7 +32,7 @@ export const userControllerDeleteUser: IUserControllerDeleteUser = async ({ user
      * found model by updating the value of the model's
      * 'adminStatusId' field.
      */
-    const userModel = await UserModel.findOneAndUpdate(
+    await UserModel.findOneAndUpdate(
       {
         _id: userId,
       },

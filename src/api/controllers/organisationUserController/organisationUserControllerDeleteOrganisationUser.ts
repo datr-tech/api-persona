@@ -33,7 +33,7 @@ export const organisationUserControllerDeleteOrganisationUser: IOrganisationUser
        * found model by updating the value of the model's
        * 'adminStatusId' field.
        */
-      const organisationUserModel = await OrganisationUserModel.findOneAndUpdate(
+      await OrganisationUserModel.findOneAndUpdate(
         {
           _id: organisationUserId,
         },
