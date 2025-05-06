@@ -21,7 +21,7 @@ import { Types } from 'mongoose';
  * @param { Types.ObjectId } params.adminStatusId
  * @param { Types.ObjectId } params.adminUserId
  * @param { number } params.createdAt  (Optional)
- * @param { number } params.updatedAt
+ * @param { number } params.updatedAt  (Optional)
  *
  * @returns { Promise<IOrganisationControllerCreateOrganisationOutput> }
  * @returns { Promise<IOrganisationControllerCreateOrganisationOutputError> } ON ERROR: Promise<{ error: true, payload: { message }}>
@@ -74,7 +74,10 @@ export const organisationControllerCreateOrganisation: IOrganisationControllerCr
        * 'stat', to return the found model's primary key.
        */
       stat.error = false;
-      stat.payload = { organisationId };
+      stat.payload = {
+        organisationId,
+        responseStatusCode: 201,
+      };
 
       /*
        * Cast the response object to
@@ -89,7 +92,10 @@ export const organisationControllerCreateOrganisation: IOrganisationControllerCr
        * 'stat', to return the error message.
        */
       const { message } = error;
-      stat.payload = { message };
+      stat.payload = {
+        message,
+        responseStatusCode: 404,
+      };
 
       /*
        * Cast the response object to 'IOrganisationControllerCreateOrganisationOutputError',

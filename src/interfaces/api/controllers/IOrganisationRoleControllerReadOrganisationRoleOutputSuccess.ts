@@ -4,5 +4,6 @@ export interface IOrganisationRoleControllerReadOrganisationRoleOutputSuccess {
   error: false;
   payload: {
     organisationRoleModel: IOrganisationRoleModel;
+    responseStatusCode: number;
   };
 }

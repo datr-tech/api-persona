@@ -51,7 +51,10 @@ export const organisationTypeControllerDeleteOrganisationType: IOrganisationType
        * "soft deleted" model.
        */
       stat.error = false;
-      stat.payload = { organisationTypeId };
+      stat.payload = {
+        organisationTypeId,
+        responseStatusCode: 200,
+      };
 
       /*
        * Cast the response object to
@@ -66,7 +69,10 @@ export const organisationTypeControllerDeleteOrganisationType: IOrganisationType
        * 'stat', to return the error message.
        */
       const { message } = error;
-      stat.payload = { message };
+      stat.payload = {
+        message,
+        responseStatusCode: 404,
+      };
 
       /*
        * Cast the response object to 'IOrganisationTypeControllerDeleteOrganisationTypeOutputError',

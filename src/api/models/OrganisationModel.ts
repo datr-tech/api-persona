@@ -1,9 +1,9 @@
 import {
   modelValidatorAdminStatusId,
-  modelValidatorAdminUserId,
   modelValidatorFrameworkId,
 } from '@app-ap/api/modelValidators/foreign';
 
+import { modelValidatorAdminUserId } from '@app-ap/api/modelValidators/local/modelValidatorAdminUserId';
 import { modelValidatorOrganisationTypeId } from '@app-ap/api/modelValidators/local/modelValidatorOrganisationTypeId';
 
 import {

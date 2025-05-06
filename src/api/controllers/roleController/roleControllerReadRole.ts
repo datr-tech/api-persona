@@ -35,7 +35,10 @@ export const roleControllerReadRole: IRoleControllerReadRole = async ({ roleId }
      * 'stat', to return the found model.
      */
     stat.error = false;
-    stat.payload = { roleModel };
+    stat.payload = {
+      roleModel,
+      responseStatusCode: 200,
+    };
 
     /*
      * Cast the response object to
@@ -50,7 +53,10 @@ export const roleControllerReadRole: IRoleControllerReadRole = async ({ roleId }
      * 'stat', to return the error message.
      */
     const { message } = error;
-    stat.payload = { message };
+    stat.payload = {
+      message,
+      responseStatusCode: 404,
+    };
 
     /*
      * Cast the response object to 'IRoleControllerReadRoleOutputError',

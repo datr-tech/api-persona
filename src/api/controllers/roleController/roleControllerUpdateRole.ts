@@ -55,7 +55,10 @@ export const roleControllerUpdateRole: IRoleControllerUpdateRole = async ({
      * 'stat', to return the updated model's primary key.
      */
     stat.error = false;
-    stat.payload = { roleId };
+    stat.payload = {
+      roleId,
+      responseStatusCode: 200,
+    };
 
     /*
      * Cast the response object to 'IRoleControllerUpdateRoleOutputSuccess',
@@ -69,7 +72,10 @@ export const roleControllerUpdateRole: IRoleControllerUpdateRole = async ({
      * 'stat', to return the error message.
      */
     const { message } = error;
-    stat.payload = { message };
+    stat.payload = {
+      message,
+      responseStatusCode: 404,
+    };
 
     /*
      * Cast the response object to 'IRoleControllerUpdateRoleOutputError',

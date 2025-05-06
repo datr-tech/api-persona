@@ -1,4 +1,4 @@
-import { UserTypeModel } from '@app-ap/api/models';
+import { UserTypeModel } from '@app-ap/api/models/UserTypeModel';
 
 export const modelValidatorUserTypeId = async (doc, next) => {
   let userType;

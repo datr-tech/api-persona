@@ -4,5 +4,6 @@ export interface IUserTypeControllerCreateUserTypeOutputSuccess {
   error: false;
   payload: {
     userTypeId: Types.ObjectId;
+    responseStatusCode: number;
   };
 }

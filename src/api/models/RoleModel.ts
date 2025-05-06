@@ -1,7 +1,5 @@
-import {
-  modelValidatorAdminStatusId,
-  modelValidatorAdminUserId,
-} from '@app-ap/api/modelValidators/foreign';
+import { modelValidatorAdminStatusId } from '@app-ap/api/modelValidators/foreign';
+import { modelValidatorAdminUserId } from '@app-ap/api/modelValidators/local/modelValidatorAdminUserId';
 import {
   roleModelSchema,
   roleModelSchemaOptions,

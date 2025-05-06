@@ -4,5 +4,6 @@ export interface IRoleControllerCreateRoleOutputSuccess {
   error: false;
   payload: {
     roleId: Types.ObjectId;
+    responseStatusCode: number;
   };
 }

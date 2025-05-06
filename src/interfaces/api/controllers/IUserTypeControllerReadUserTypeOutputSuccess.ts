@@ -4,5 +4,6 @@ export interface IUserTypeControllerReadUserTypeOutputSuccess {
   error: false;
   payload: {
     userTypeModel: IUserTypeModel;
+    responseStatusCode: number;
   };
 }

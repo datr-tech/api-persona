@@ -4,5 +4,6 @@ export interface IUserTypeControllerUpdateUserTypeOutputSuccess {
   error: false;
   payload: {
     userTypeId: Types.ObjectId;
+    responseStatusCode: number;
   };
 }

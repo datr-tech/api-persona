@@ -1,4 +1,4 @@
-import { RoleModel } from '@app-ap/api/models';
+import { RoleModel } from '@app-ap/api/models/RoleModel';
 
 export const modelValidatorRoleId = async (doc, next) => {
   let role;

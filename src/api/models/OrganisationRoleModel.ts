@@ -1,10 +1,6 @@
-import {
-  modelValidatorAdminStatusId,
-  modelValidatorAdminUserId,
-} from '@app-ap/api/modelValidators/foreign';
-
+import { modelValidatorAdminStatusId } from '@app-ap/api/modelValidators/foreign';
+import { modelValidatorAdminUserId } from '@app-ap/api/modelValidators/local/modelValidatorAdminUserId';
 import { modelValidatorOrganisationId } from '@app-ap/api/modelValidators/local/modelValidatorOrganisationId';
-
 import { modelValidatorRoleId } from '@app-ap/api/modelValidators/local/modelValidatorRoleId';
 
 import {

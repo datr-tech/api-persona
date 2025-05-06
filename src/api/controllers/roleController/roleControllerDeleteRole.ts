@@ -50,7 +50,10 @@ export const roleControllerDeleteRole: IRoleControllerDeleteRole = async ({ role
      * "soft deleted" model.
      */
     stat.error = false;
-    stat.payload = { roleId };
+    stat.payload = {
+      roleId,
+      responseStatusCode: 200,
+    };
 
     /*
      * Cast the response object to
@@ -65,7 +68,10 @@ export const roleControllerDeleteRole: IRoleControllerDeleteRole = async ({ role
      * 'stat', to return the error message.
      */
     const { message } = error;
-    stat.payload = { message };
+    stat.payload = {
+      message,
+      responseStatusCode: 404,
+    };
 
     /*
      * Cast the response object to 'IRoleControllerDeleteRoleOutputError',

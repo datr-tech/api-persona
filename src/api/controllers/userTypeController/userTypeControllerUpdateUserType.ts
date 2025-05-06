@@ -53,7 +53,10 @@ export const userTypeControllerUpdateUserType: IUserTypeControllerUpdateUserType
        * 'stat', to return the updated model's primary key.
        */
       stat.error = false;
-      stat.payload = { userTypeId };
+      stat.payload = {
+        userTypeId,
+        responseStatusCode: 200,
+      };
 
       /*
        * Cast the response object to 'IUserTypeControllerUpdateUserTypeOutputSuccess',
@@ -67,7 +70,10 @@ export const userTypeControllerUpdateUserType: IUserTypeControllerUpdateUserType
        * 'stat', to return the error message.
        */
       const { message } = error;
-      stat.payload = { message };
+      stat.payload = {
+        message,
+        responseStatusCode: 404,
+      };
 
       /*
        * Cast the response object to 'IUserTypeControllerUpdateUserTypeOutputError',

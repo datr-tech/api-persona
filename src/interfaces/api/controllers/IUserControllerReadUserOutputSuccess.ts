@@ -4,5 +4,6 @@ export interface IUserControllerReadUserOutputSuccess {
   error: false;
   payload: {
     userModel: IUserModel;
+    responseStatusCode: number;
   };
 }

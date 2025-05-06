@@ -4,5 +4,6 @@ export interface IUserTypeControllerDeleteUserTypeOutputSuccess {
   error: false;
   payload: {
     userTypeId: Types.ObjectId;
+    responseStatusCode: number;
   };
 }

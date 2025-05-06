@@ -4,5 +4,6 @@ export interface IRoleControllerReadRoleOutputSuccess {
   error: false;
   payload: {
     roleModel: IRoleModel;
+    responseStatusCode: number;
   };
 }

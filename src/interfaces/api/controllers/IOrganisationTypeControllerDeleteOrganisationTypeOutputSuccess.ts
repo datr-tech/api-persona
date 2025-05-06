@@ -4,5 +4,6 @@ export interface IOrganisationTypeControllerDeleteOrganisationTypeOutputSuccess 
   error: false;
   payload: {
     organisationTypeId: Types.ObjectId;
+    responseStatusCode: number;
   };
 }

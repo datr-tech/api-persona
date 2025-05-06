@@ -4,5 +4,6 @@ export interface IUserSessionControllerCreateUserSessionOutputSuccess {
   error: false;
   payload: {
     userSessionId: Types.ObjectId;
+    responseStatusCode: number;
   };
 }

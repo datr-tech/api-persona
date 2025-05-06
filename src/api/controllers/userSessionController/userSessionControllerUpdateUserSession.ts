@@ -54,7 +54,10 @@ export const userSessionControllerUpdateUserSession: IUserSessionControllerUpdat
        * 'stat', to return the updated model's primary key.
        */
       stat.error = false;
-      stat.payload = { userSessionId };
+      stat.payload = {
+        userSessionId,
+        responseStatusCode: 200,
+      };
 
       /*
        * Cast the response object to 'IUserSessionControllerUpdateUserSessionOutputSuccess',
@@ -68,7 +71,10 @@ export const userSessionControllerUpdateUserSession: IUserSessionControllerUpdat
        * 'stat', to return the error message.
        */
       const { message } = error;
-      stat.payload = { message };
+      stat.payload = {
+        message,
+        responseStatusCode: 404,
+      };
 
       /*
        * Cast the response object to 'IUserSessionControllerUpdateUserSessionOutputError',

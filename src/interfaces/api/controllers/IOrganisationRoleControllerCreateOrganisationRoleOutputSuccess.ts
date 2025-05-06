@@ -4,5 +4,6 @@ export interface IOrganisationRoleControllerCreateOrganisationRoleOutputSuccess 
   error: false;
   payload: {
     organisationRoleId: Types.ObjectId;
+    responseStatusCode: number;
   };
 }

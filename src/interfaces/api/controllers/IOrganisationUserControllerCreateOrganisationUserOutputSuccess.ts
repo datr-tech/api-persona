@@ -4,5 +4,6 @@ export interface IOrganisationUserControllerCreateOrganisationUserOutputSuccess 
   error: false;
   payload: {
     organisationUserId: Types.ObjectId;
+    responseStatusCode: number;
   };
 }
